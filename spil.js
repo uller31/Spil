@@ -54,8 +54,7 @@ function opdaterCanvas(){
 	var ctx = accel.getContext("2d");
 	var x =event.touches[0].pageX;
 	var y = event.touches[0].pageY
-	ctx.moveTo(0,0)
-	ctx.lineTo(200,100);
+	ctx.lineTo(accX,accY);
 	ctx.stroke();
 }
 

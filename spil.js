@@ -7,6 +7,13 @@ var watchID = 0;
 //I onLoad tilføjes eventlistener
 function onLoad(){
 document.addEventListener("deviceready", onDeviceReady, false);
+var accel = document.getElementById("mycanvas");
+	accel.addEventListener(opdaterCanvas, false);
+	accel.addEventListener(end,false);
+	ctx = accel.getContext("2d");
+	mycanvas.width = mycanvas.width;
+	ctx.fillStyle="yellow";
+	ctx.fillRect(0,0,mycanvas.width,mycanvas.height);
 }
 //kalder startfunktionen når enheden er klar
 function onDeviceReady() {
@@ -39,15 +46,7 @@ function onError() {
 alert('onError!');
 }
 
-function init(){
-	var accel = document.getElementById("mycanvas");
-	accel.addEventListener("touchmove",opdaterCanvas, false);
-	accel.addEventListener("touchend",end,false);
-	ctx = accel.getContext("2d");
-	mycanvas.width = mycanvas.width;
-	ctx.fillStyle="yellow";
-	ctx.fillRect(0,0,mycanvas.width,mycanvas.height);
-}
+
 
 function opdaterCanvas(){
 	var accel = document.getElementById("mycanvas");

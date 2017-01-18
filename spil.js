@@ -51,9 +51,9 @@ alert('onError!');
 function opdaterCanvas(){
 	var accel = document.getElementById("mycanvas");
 	var ctx = accel.getContext("2d");
-	var x =event.touches[0].pageX;
-	var y = event.touches[0].pageY
-	ctx.lineTo(accX,accY);
+	var accelx =event.touches[0].pageX;
+	var accely = event.touches[0].pageY
+	ctx.lineTo(accelx,accely);
 	ctx.stroke();
 }
 

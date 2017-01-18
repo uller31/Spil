@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>HTML5 Tegn med accelerometer</title>
+		<meta http-equiv="content-Type" content="text/html; charset-UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="spil.js"></script>
+	</head>
+	
+	<body onload ="onLoad()" onload="init()">
+		<h1> Tegn med accelerometer</h1>
+			<div id="accelerometer">Waiting for accelerometer...</div>
+			<button onclick="starttegn();">Start med at tegne</button>
+			<button onclick="stoptegn();">Stop med at tegne</button><br>	
+			<canvas id="mycanvas" width="350" height="400"></canvas>	
+	</body>
+</html>
